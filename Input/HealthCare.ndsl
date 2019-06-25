@@ -1,0 +1,18 @@
+grl model{
+		actor Patient{
+		goal SeekHealthcare{decompositionType='and'; decomposedBy ProvideMedicalDetails,send_reports,get_medicine;}
+		goal ProvideMedicalDetails{demands Security;demands Compression;}
+		goal send_reports{decompositionType='none';}
+		goal get_medicine{decompositionType='none';}
+		}
+    actor Doctor{
+    goal ProvideHealthcare{decompositionType='and'; decomposedBy Registration,Login,AccessMedicalHistory;}
+		goal Registration;
+		goal Login{
+			dependsOn Registration;
+			demands Authentication;
+		}
+		goal AccessMedicalHistory;
+		softGoal Authentication;
+	}
+}
