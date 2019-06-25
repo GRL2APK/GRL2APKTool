@@ -5,14 +5,4 @@ grl model{
 		goal send_reports{decompositionType='none';}
 		goal get_medicine{decompositionType='none';}
 		}
-    actor Doctor{
-    goal ProvideHealthcare{decompositionType='and'; decomposedBy Registration,Login,AccessMedicalHistory;}
-		goal Registration;
-		goal Login{
-			dependsOn Registration;
-			demands Authentication;
-		}
-		goal AccessMedicalHistory;
-		softGoal Authentication;
-	}
 }
