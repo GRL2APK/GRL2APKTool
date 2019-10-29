@@ -1,0 +1,20 @@
+[comment encoding = Cp1252 /]
+[module insertindb('http://www.xtext.org/example/novadsl/NovaDsl')/]
+
+[query public insertDB(arg0 : Integer) : OclVoid
+	= invoke('AcceleoGoal2Code.main.services.InsertInDB', 'insertDB()', Sequence{arg0})
+/]
+
+[query public parse(anOclAny: OclAny) : OclVoid
+	= invoke('AcceleoGoal2Code.main.services.InsertInDB', 'parse()', Sequence{})
+/]
+
+[query public parse2(anOclAny: OclAny) : OclVoid
+	= invoke('AcceleoGoal2Code.main.services.InsertInDB', 'parse2()', Sequence{})
+/]
+
+[query public updateDemands(anOclAny: OclAny) : OclVoid
+	= invoke('AcceleoGoal2Code.main.services.InsertInDB', 'updateDemands()', Sequence{})
+/]
+
+
