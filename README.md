@@ -1,7 +1,10 @@
 # GRL2APKTool
-GRL2APK tool is able to generate Android apk file directly from goal model specified using XtGRL notation. This tool involves several technologies such as Acceleo MTL (Model to text transformation Language), Amazon AWS s3 and android libraries. "HealthCare.ndsl" (GRL2APKTool/Input/HealthCare.ndsl) file contains the input goal model written in XtGRL. In the "Tool" folder, the entire project is uploaded as the "AcceleoGoal2Code.zip" along with a "readme.txt". "readme.txt" file contains the instructions to deploy the project.
+GRL2APK tool is able to generate Android apk file directly from goal model specified using XtGRL notation. This tool involves several technologies such as Acceleo MTL (Model to text transformation Language), Amazon AWS s3 and android libraries. "HealthCare.ndsl" (GRL2APKTool/Input/HealthCare.ndsl) file contains the input goal model written in XtGRL. In the "Tool" folder, different folders are created for containing modules which are responsible to accomplish different tasks. Each folder contains a "readme.txt". "readme.txt" file contains the instructions to deploy the project.
 "GRL2APKTool/Output" folder contains the resulting codes that are fetched and integrated from the AWS S3 repository. A workflow file ("GRL2APKTool/Output/Workflow.txt") contains the workflow of the app and based on which the codes are integrated. 
-In the tool a specific interface allows the developer to choose the proper workflow of the app by choosing different goals and their code signature. Consistency checking is also done here to ensure that there is no inconsistency present in the workflow. 
-After generation of the workflow a particular module is resposible to extract codes from the AWS S3 code repository and integrate them according to the specification in the workflow file.
-Another module creates a project that is suitable for android compiler using those integrated codes.
+Step 1: First follow the instructions in the "AcceleoCodes" folder to process the goal model.
+Step 2: Follow the instructions in "Web Service" folder.
+Step 3: Switch to "AcceleoCodes" folder again and follow the instructions in "AcceleoCodes" folder.
+Step 4: Follow the instructions in "APK Generator" folder.
 Finally, one of the IDE for android platform (in our case Android Studio is used)can be used to import the project and build the apk file. 
+
+
