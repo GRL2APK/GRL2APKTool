@@ -1,1 +1,3 @@
-void provideMedicalDetails(ArrayList<String>) >> ArrayList<String> LZ(ArrayList<String>) >> ArrayList<String> AES_Encryption(ArrayList<String>) >> ArrayList<String> send_reports() >> void get_medicine(ArrayList<String>) >> void SeekHealthcare() >> stop()
+ArrayList<Object>createRecords() >> ArrayList<String> LZ(ArrayList<String>)
+>> ArrayList<String> 3DES_Encryption(ArrayList<String>) >>  
+void sendRecords(ArrayList<String>) >> void provideMedicalRecords()>> stop()
