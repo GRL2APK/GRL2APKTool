@@ -1,0 +1,6 @@
+softGoal Encryption
+{
+	decompositionType = or ;
+	decomposedBy = AES_Encryption, DES_Encryption, 3DES_Encryption, BlowFish ;
+
+}
