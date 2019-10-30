@@ -1,0 +1,19 @@
+grl HealthCare{
+	actor Patient{
+		goal ProvideMedicalRecords{
+			decompositionType='and'; decomposedBy createRecords,sendRecords;
+		}
+		goal sendRecords{
+			demands Confidentiality, Efficiency;
+		}
+		softGoal Confidentiality; softGoal Efficiency;
+		goal createRecords;
+	}
+	actor Doctor{
+		goal AccessMedicalRecords{
+			decompositionType='and'; decomposedBy showRecords;
+			dependsOn Patient.ProvideMedicalRecords;
+		}
+		goal showRecords;
+	}
+}
